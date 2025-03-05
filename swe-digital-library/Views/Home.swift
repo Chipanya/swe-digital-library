@@ -9,7 +9,17 @@ import SwiftUI
 
 struct Home: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            ZStack {
+                Color(hex: 0xB7F9F5)
+                    .edgesIgnoringSafeArea(.top)
+                
+                VStack {
+                    Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                }
+                .navigationTitle("Home")
+            }
+        }
     }
 }
 
