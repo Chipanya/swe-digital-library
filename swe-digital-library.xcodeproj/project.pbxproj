@@ -6,9 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6DEAA1CA2D78E93700CA615A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6DEAA1C92D78E93700CA615A /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		6DEAA1452D78E32300CA615A /* swe-digital-library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swe-digital-library.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DEAA15B2D78E73600CA615A /* swe-digital-library.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "swe-digital-library.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		6DEAA1452D78E32300CA615A /* swe-digital-library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "swe-digital-library.app"; path = "/Users/claudiussongnius/Documents/Swift/Projects/swe-digital-library/build/Debug-iphoneos/swe-digital-library.app"; sourceTree = "<absolute>"; };
+		6DEAA1C92D78E93700CA615A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -33,18 +37,9 @@
 		6DEAA13C2D78E32300CA615A = {
 			isa = PBXGroup;
 			children = (
-				6DEAA15B2D78E73600CA615A /* swe-digital-library.xcodeproj */,
 				6DEAA1472D78E32300CA615A /* swe-digital-library */,
-				6DEAA1462D78E32300CA615A /* Products */,
+				6DEAA1C92D78E93700CA615A /* README.md */,
 			);
-			sourceTree = "<group>";
-		};
-		6DEAA1462D78E32300CA615A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6DEAA1452D78E32300CA615A /* swe-digital-library.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,7 +92,7 @@
 			mainGroup = 6DEAA13C2D78E32300CA615A;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 6DEAA1462D78E32300CA615A /* Products */;
+			productRefGroup = 6DEAA13C2D78E32300CA615A;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -111,6 +106,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DEAA1CA2D78E93700CA615A /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
