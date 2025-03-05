@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct Home: View {
+    @State private var searchText: String = ""
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -15,6 +17,9 @@ struct Home: View {
                     .edgesIgnoringSafeArea(.top)
                 
                 VStack {
+                    
+                    SearchBar(searchText: $searchText)
+                        .padding()
                     
                     ScrollView(.horizontal) {
                         HStack(spacing: 25) {
