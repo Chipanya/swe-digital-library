@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Home: View {
     @State private var searchText: String = ""
+    @State private var currentIndex = 0
     
     var body: some View {
         NavigationStack {
@@ -24,46 +25,73 @@ struct Home: View {
                     ScrollView(.horizontal) {
                         HStack(spacing: 25) {
                             ForEach(0..<sampleBooks.count, id: \.self) { index in
-                                VStack {
-                                    Image(sampleBooks[index].image)
-                                        .resizable()
-                                        .scaledToFit()
-                                        .clipShape(RoundedRectangle(cornerRadius: 20))
-                                        .shadow(radius: 5, x: 5, y: 5)
-                                        .frame(width: UIScreen.main.bounds.width - 100, height: 320)
-                                        .scrollTransition { content, phase in
-                                            content
-                                                .opacity(phase.isIdentity ? 1 : 0.5)
-                                                .scaleEffect(y: phase.isIdentity ? 1 : 0.7)
-                                        }
-                                    
-                                    Text(sampleBooks[index].title)
-                                        .font(.headline)
-                                        .multilineTextAlignment(.center)
-                                        .frame(width: 120)
-                                    
-                                    ScrollView {
-                                        Text(sampleBooks[index].description)
-                                            .font(.subheadline)
-                                            .multilineTextAlignment(.center)
-                                            .frame(width: 280)
-                                    }
-                                    
-                                    Button("Add To Library") {
+                                GeometryReader { geometry in
+                                    VStack {
+                                        Image(sampleBooks[index].image)
+                                            .resizable()
+                                            .scaledToFit()
+                                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                                            .shadow(radius: 5, x: 5, y: 5)
+                                            .frame(width: UIScreen.main.bounds.width - 100, height: 320)
+                                            .scrollTransition { content, phase in
+                                                content
+                                                    .opacity(phase.isIdentity ? 1 : 0.5)
+                                                    .scaleEffect(y: phase.isIdentity ? 1 : 0.7)
+                                            }
+                                            .onAppear {
+                                                withAnimation {
+                                                    currentIndex = index
+                                                }
+                                            }
                                         
+                                        Text(sampleBooks[index].title)
+                                            .font(.headline)
+                                            .multilineTextAlignment(.center)
+                                            .frame(width: 120)
+                                        
+                                        ScrollView {
+                                            Text(sampleBooks[index].description)
+                                                .font(.subheadline)
+                                                .multilineTextAlignment(.center)
+                                                .frame(width: 280)
+                                        }
+                                        
+                                        Button("Add To Library") {
+                                            
+                                        }
+                                        .buttonStyle(.bordered)
+                                        .foregroundStyle(.white)
+                                        .background(.black)
+                                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                                        .padding(.top)
                                     }
-                                    .buttonStyle(.bordered)
-                                    .foregroundStyle(.white)
-                                    .background(.black)
-                                    .clipShape(RoundedRectangle(cornerRadius: 20))
-                                    .padding()
+                                    .onChange(of: geometry.frame(in: .global).midX) { newValue, _ in
+                                        let screenMid = UIScreen.main.bounds.width / 2
+                                        if abs(newValue - screenMid) < 50 { // Detects if item is centered
+                                            currentIndex = index
+                                        }
+                                    }
                                 }
+                                // Maintain item width
+                                .frame(width: UIScreen.main.bounds.width - 100)
                             }
+                            
                         }
                         .scrollTargetLayout()
                     }
                     .contentMargins(50, for: .scrollContent)
                     .scrollTargetBehavior(.viewAligned)
+                    .scrollIndicators(.hidden)
+                    
+                    // Custom Page Indicator (Dots)**
+                    HStack(spacing: 8) {
+                        ForEach(sampleBooks.indices, id: \.self) { dotIndex in
+                            Circle()
+                                .frame(width: 10, height: 10)
+                                .foregroundColor(dotIndex == currentIndex ? .black : .gray.opacity(0.5))
+                        }
+                    }
+                    .padding(.bottom, 50)
                 }
                 .toolbar(content: {
                     ToolbarItem(placement: .topBarLeading, content: {
