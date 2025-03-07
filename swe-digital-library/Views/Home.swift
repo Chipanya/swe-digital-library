@@ -65,7 +65,18 @@ struct Home: View {
                     .contentMargins(50, for: .scrollContent)
                     .scrollTargetBehavior(.viewAligned)
                 }
-                .navigationTitle("Home")
+                .toolbar(content: {
+                    ToolbarItem(placement: .topBarLeading, content: {
+                        Text("Home")
+                            .font(.title2).fontWeight(.bold)
+                    })
+                    
+                    ToolbarItem(placement: .topBarTrailing, content: {
+                        Button("Notification", systemImage: "bell") {
+                            
+                        }
+                    })
+                })
             }
         }
     }
