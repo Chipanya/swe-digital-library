@@ -34,3 +34,18 @@ var myCollection: [Book] = [
     .init(title: "Calm the Mind and the Body Will Follow", author: "N.L. Nelani", genre: "Spirituality", description: "It’s a perfectly simple question. Yet somehow, it makes us wonder more about our state of mind. Lingering on matters like, Am I good enough?", image: "CTM"),
     .init(title: "The Insomnia Breakthrough", author: "Catherine Coleman", genre: "Health", description: "Imagine drifting into a deep, unbroken sleep with ease and waking up each day feeling refreshed and full of energy. This isn't an unreachable dream—it's entirely within your grasp. The advice in this book will help you get there!", image: "TIB"),
 ]
+
+var libraryList: [Book] = [
+    .init(title: "The Hobbit", author: "J.R.R. Tolkien", genre: "Fantasy", description: "Bilbo Baggins is a hobbit who enjoys a comfortable, unambitious life, rarely travelling further than the pantry of his hobbit-hole in Bag End. But his contentment is disturbed when the wizard, Gandalf, and a company of thirteen dwarves arrive on his doorstep one day, to whisk him away on a journey ‘there and back again’. They have a plot to raid the treasure hoard of Smaug the Magnificent, a large and very dangerous dragon…", image: "TH"),
+    .init(title: "The Fellowship of the Ring", author: "J.R.R. Tolkien", genre: "Fantasy", description: "", image: "TFOTR"),
+    .init(title: "The Two Towers", author: "J.R.R. Tolkien", genre: "Fantasy", description: "", image: "TTT"),
+    .init(title: "The Return of the King", author: "J.R.R. Tolkien", genre: "Fantasy", description: "", image: "TROTK"),
+    .init(title: "The Hobbit", author: "J.R.R. Tolkien", genre: "Fantasy", description: "Bilbo Baggins is a hobbit who enjoys a comfortable, unambitious life, rarely travelling further than the pantry of his hobbit-hole in Bag End. But his contentment is disturbed when the wizard, Gandalf, and a company of thirteen dwarves arrive on his doorstep one day, to whisk him away on a journey ‘there and back again’. They have a plot to raid the treasure hoard of Smaug the Magnificent, a large and very dangerous dragon…", image: "TH"),
+    .init(title: "The Fellowship of the Ring", author: "J.R.R. Tolkien", genre: "Fantasy", description: "", image: "TFOTR"),
+    .init(title: "The Two Towers", author: "J.R.R. Tolkien", genre: "Fantasy", description: "", image: "TTT"),
+    .init(title: "The Return of the King", author: "J.R.R. Tolkien", genre: "Fantasy", description: "", image: "TROTK"),
+    .init(title: "The Hobbit", author: "J.R.R. Tolkien", genre: "Fantasy", description: "Bilbo Baggins is a hobbit who enjoys a comfortable, unambitious life, rarely travelling further than the pantry of his hobbit-hole in Bag End. But his contentment is disturbed when the wizard, Gandalf, and a company of thirteen dwarves arrive on his doorstep one day, to whisk him away on a journey ‘there and back again’. They have a plot to raid the treasure hoard of Smaug the Magnificent, a large and very dangerous dragon…", image: "TH"),
+    .init(title: "The Fellowship of the Ring", author: "J.R.R. Tolkien", genre: "Fantasy", description: "", image: "TFOTR"),
+    .init(title: "The Two Towers", author: "J.R.R. Tolkien", genre: "Fantasy", description: "", image: "TTT"),
+    .init(title: "The Return of the King", author: "J.R.R. Tolkien", genre: "Fantasy", description: "", image: "TROTK")
+]

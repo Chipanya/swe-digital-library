@@ -11,8 +11,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6DEAA1452D78E32300CA615A /* swe-digital-library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "swe-digital-library.app"; path = "/Users/claudiussongnius/Documents/Swift/Projects/swe-digital-library/build/Debug-iphoneos/swe-digital-library.app"; sourceTree = "<absolute>"; };
 		6DEAA1C92D78E93700CA615A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6DEAA2722D7B607F00CA615A /* swe-digital-library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swe-digital-library.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -39,6 +39,7 @@
 			children = (
 				6DEAA1472D78E32300CA615A /* swe-digital-library */,
 				6DEAA1C92D78E93700CA615A /* README.md */,
+				6DEAA2722D7B607F00CA615A /* swe-digital-library.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,7 +65,7 @@
 			packageProductDependencies = (
 			);
 			productName = "swe-digital-library";
-			productReference = 6DEAA1452D78E32300CA615A /* swe-digital-library.app */;
+			productReference = 6DEAA2722D7B607F00CA615A /* swe-digital-library.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
