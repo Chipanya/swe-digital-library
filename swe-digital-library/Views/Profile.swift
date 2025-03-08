@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct Profile: View {
+    @State private var showSettings = false
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -155,8 +157,12 @@ struct Profile: View {
                 }
                 .toolbar(content: {
                     ToolbarItem(placement: .topBarTrailing, content: {
-                        Button("Settings", systemImage: "gearshape") {
-                            
+                        Button(action: {
+                            withAnimation(.easeInOut) {
+                                showSettings.toggle()
+                            }
+                        }) {
+                            Image(systemName: "gearshape")
                         }
                     })
                 })
