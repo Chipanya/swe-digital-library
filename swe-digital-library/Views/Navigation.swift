@@ -13,6 +13,9 @@ struct Navigation: View {
             Tab("Home", systemImage: "house") {
                 Home()
             }
+            Tab("Explore", systemImage: "safari") {
+                Explore()
+            }
             Tab("Library", systemImage: "book.closed") {
                 Library()
             }
